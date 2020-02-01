@@ -1,0 +1,6 @@
+Sat, 01 Feb 2020 11:45:12 GMT | INFO | app.log | APP LAUNCHED IN PORT 4000 | 
+Sat, 01 Feb 2020 11:45:18 GMT | INFO | app.log | Request recieved at /test | data:{"gender":"Male","age":18,"name":"John"} | log_data:{"gender":"Male","age":18,"name":"John"} | 
+Sat, 01 Feb 2020 11:45:18 GMT | INFO | app.log | Retun sucess response | data:{"sucess":true} | log_data:{"gender":"Male","age":18,"name":"John"} | 
+Sat, 01 Feb 2020 11:46:53 GMT | INFO | app.log | Request recieved at /test | data:{"gender":"Male","age":15,"name":""} | log_data:{"gender":"Male","age":15,"name":""} | 
+Sat, 01 Feb 2020 11:46:53 GMT | ERROR | app.log | Name field is empty | log_data:{"gender":"Male","age":15,"name":""} | 
+Sat, 01 Feb 2020 11:46:53 GMT | ERROR | app.log | Retun error response | data:{"sucess":false} | log_data:{"gender":"Male","age":15,"name":""} | 
