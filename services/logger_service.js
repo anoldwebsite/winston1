@@ -30,9 +30,19 @@ class LoggerService {
                     //                                 | log_data:{"b": "b"}
                     message = this.log_data ? message + `log_data:${JSON.stringify(this.log_data)} | ` : message
                     return message
-                })
+                }),
+                exceptionHandlers: [
+                    new winston.transports.File(
+                        {
+                            filename: `./logs/${route}-ex-uncaught.log`
+                        }
+                    )
+                ]
             }
-        );
+        );//function createLogger ends here.
+        //By default, winston will exit after logging an uncaughtException. 
+        //If this is not the behaviour you want, set exitOnError = false;
+        //logger.exitOnError = false;
         this.logger = logger
     };//constructor ends here.
 
