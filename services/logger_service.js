@@ -21,6 +21,7 @@ class LoggerService {
                         }
                     )
                 ],
+                //format: winston.format.json(),
                 format: winston.format.printf((info) => {
                     //Sat, 01 Feb 2020 09:50:13 GMT | INFO/DEBUG/ERROR | main.log(The file that log belongs to) | App started (The event that occured)
                     let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${route}.log | ${info.message} | `
